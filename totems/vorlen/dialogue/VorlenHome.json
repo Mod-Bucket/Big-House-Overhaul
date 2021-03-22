@@ -4,105 +4,110 @@
     "body": [
       "<<lockPlayerInConversation>>",
       "<<typewriterMode on>>",
-      "<<pickRandomPath>>",
-      "<<Cecile>>",
-      "<<ComeForMe>>",
-      "<<Rem>>",
-      "<<flushRandomPath>>"
+      "<<branchMissingTotem mods.mb.BigHouseOverhaul.totem.VorlenHome Mailbox False>>",
+      "<<branchValidStructureExistsWithTier mods.mb.BigHouseOverhaul.totem.VorlenHome 0 HouseBuilt>>",
+      "[[House_NotComplete]]",
+      ""
     ],
     "tags": "",
     "colorID": 0,
     "position": {
-      "x": 539,
+      "x": 538,
       "y": 261
     }
   },
   {
-    "title": "Cecile",
+    "title": "GiveMailbox",
     "body": [
-      "<<branchNoVillagerWithName Cecile NoCecile>>",
-      "<<if $spoken_about_cecile is 1>>",
-      "<<loadVillagerName Cecile $c_name>>",
-      "^c:1486b0;$c_name;^c:pop;? #line:10000100",
-      "Oh, it's just that she looks just like someone I used to know... #line:10000200",
-      "She's a bit too young to be her though. #line:10000300",
-      "Someday I'll work up the courage to ask her about it. #line:10000400",
+      "Here is my mailbox. #line:10021100",
+      "I can't wait to see what you build. #line:10021200",
+      "<<set $spoken_about_mailbox = 1>>",
+      "<<typewriterMode off True True>>",
+      "<<releasePlayerFromConversation>>"
+    ],
+    "tags": "",
+    "colorID": 0,
+    "position": {
+      "x": 1110,
+      "y": 255
+    }
+  },
+  {
+    "title": "No",
+    "body": [
+      "...oh...  #line:10031100",
+      "Well... I'm always here if you need me...  #line:10031200",
+      "Since I don't have a place to go home to..... #line:10031300",
       "<<typewriterMode off True True>>",
       "<<releasePlayerFromConversation>>",
+      ""
+    ],
+    "tags": "",
+    "colorID": 0,
+    "position": {
+      "x": 1110,
+      "y": 479
+    }
+  },
+  {
+    "title": "Mailbox",
+    "body": [
+      "<<if $spoken_about_mailbox != 1>>",
+      "Did you know that most of the villagers don't even realise I lodge at the tavern? #line:10011100",
+      "They just assume I live at the store. #line:10011200",
+      "Where do they think I sleep? There are no beds here. #line:10011300",
+      "I've been thinking about getting my own place and the word around town is you're the person to talk to. #line:10011400",
+      "So what do you think? #line:10011500",
+      "Could you build me a home? #line:10011600",
+      "[[I'd love to!|GiveMailbox]] #line:10011700",
+      "[[Maybe some other time.|No]] #line:10011800",
       "<<else>>",
-      "[[NotSpoken]]",
+      "You appear to have lost my mailbox. #line:10011900",
+      "Would you like another one? #line:10012000",
+      "[[Yes Please!|GiveMailbox]] #line:10012100",
+      "[[Not Right Now|No]] #line:10012200",
       "<<endif>>"
-    ],
-    "tags": "",
-    "colorID": 0,
-    "position": {
-      "x": 194,
-      "y": 582
-    }
-  },
-  {
-    "title": "NoCecile",
-    "body": [
-      "Even though she's not in the village. #line:10000500",
-      "I can't stop thinking about her. #line:10000600",
-      "There's just something I really want to ask her... #line:10000700",
-      "<<typewriterMode off True True>>",
-      "<<releasePlayerFromConversation>>"
-    ],
-    "tags": "",
-    "colorID": 0,
-    "position": {
-      "x": -102,
-      "y": 586
-    }
-  },
-  {
-    "title": "NotSpoken",
-    "body": [
-      "<<loadVillagerName Cecile $c_name>>",
-      "Ah, ^c:1486b0;$c_name;^c:pop;. #line:10000800",
-      "Someday I'll work up the courage to talk to you... #line:10000900",
-      "Oh! Please forgive my mumbling. #line:10001000",
-      "It helps me keep my thoughts in order. #line:10001100",
-      "<<set $spoken_about_cecile to 1>>",
-      "<<typewriterMode off True True>>",
-      "<<releasePlayerFromConversation>>"
-    ],
-    "tags": "",
-    "colorID": 0,
-    "position": {
-      "x": 194,
-      "y": 850
-    }
-  },
-  {
-    "title": "Rem",
-    "body": [
-      "You want to know more about ^c:1486b0;Rem^c:pop;? #line:10001200",
-      "We grew up together - childhood friends if you would. #line:10001300",
-      "<<typewriterMode off True True>>",
-      "<<releasePlayerFromConversation>>"
-    ],
-    "tags": "",
-    "colorID": 0,
-    "position": {
-      "x": 544,
-      "y": 564
-    }
-  },
-  {
-    "title": "ComeForMe",
-    "body": [
-      "Things must be pretty serious if ^c:1486b0;Rem^c:pop; came out here looking for me... #line:10001400",
-      "I feel bad for not being able to visit more often... #line:10001500",
-      "<<typewriterMode off True True>>",
-      "<<releasePlayerFromConversation>>"
     ],
     "tags": "",
     "colorID": 0,
     "position": {
       "x": 818,
       "y": 258
+    }
+  },
+  {
+    "title": "HouseBuilt",
+    "body": [
+      "<<loadGlobal VorlenHouseBuilt $VorlenHouseBuilt>>",
+      "<<if not $VorlenHouseBuilt>>",
+      "Thank you for building my house. #line:10041100",
+      "Here is a gift to show my gratitude. #line:10041200",
+      "<<givePlayerPetals 2000>>",
+      "//<<giveItemToPlayer tilePlacer staxel.tileObject.villagers.rewards.FarmFan.chickenplushy>>",
+      "<<else>>",
+      "<<pickRandomFromDialoguePools>>",
+      "<<endif>>"
+    ],
+    "tags": "",
+    "colorID": 0,
+    "position": {
+      "x": -17,
+      "y": 430
+    }
+  },
+  {
+    "title": "House_NotComplete",
+    "body": [
+      "How's my house coming along? #line:10051100",
+      "I am so looking forward to it. #line:10051200",
+      "<<typewriterMode off True True>>",
+      "<<releasePlayerFromConversation>>"
+    ],
+    "tags": "",
+    "colorID": 0,
+    "position": {
+      "x": 256,
+      "y": 409
     }
   }
 ]
