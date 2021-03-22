@@ -1,0 +1,30 @@
+{
+  "__inherits": "staxel/tileObject/totems/totemBase.config",
+  "attachToBelow": true,
+  "categories": [
+    "misc",
+    "totem",
+    "sign"
+  ],
+  "code": "mods.mb.BigHouseOverhaul.tileObject.totems.LeifMailbox",
+  "compound": {
+    "size": {
+      "x": 1,
+      "y": 2,
+      "z": 1
+    }
+  },
+  "pricing": {
+    "catalogueUnlockedFromStart": false,
+    "buyable": false,
+    "sellPrice": 0,
+    "sellable": false,
+    "value": 1000
+  },
+  "randomizePosition": false,
+  "searchable": true,
+  "totem": {
+    "code": "staxel.totem.AlizaHome"
+  },
+  "voxels": "mods/Big-House-Overhaul/totems/Leif/LeifPostbox.qb"
+}
