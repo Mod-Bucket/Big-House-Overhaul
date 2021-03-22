@@ -6,7 +6,7 @@
     "totem",
     "sign"
   ],
-  "code": "mods.mb.BigHouseOverhaul.tileObject.totems.LeifMailbox",
+  "code": "mods.mb.BigHouseOverhaul.tileObject.totems.VorlenMailbox",
   "compound": {
     "size": {
       "x": 1,
@@ -24,7 +24,7 @@
   "randomizePosition": false,
   "searchable": true,
   "totem": {
-    "code": "mods.mb.BigHouseOverhaul.totem.LeifHome"
+    "code": "mods.mb.BigHouseOverhaul.totem.VorlenHome"
   },
-  "voxels": "mods/Big-House-Overhaul/totems/leif/LeifPostbox.qb"
+  "voxels": "mods/Big-House-Overhaul/totems/vorlen/VorlenPostbox.qb"
 }

@@ -1,0 +1,7 @@
+{
+  "code": "mods.mb.BigHouseOverhaul.dialoguePool.VorlenHome",
+  "type": "Unique",
+  "dialogue": [
+    "mods.mb.BigHouseOverhaul.dialogue.VorlenHome"
+  ]
+}

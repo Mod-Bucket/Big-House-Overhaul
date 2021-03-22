@@ -1,0 +1,7 @@
+{
+  "code": "mods.mb.BigHouseOverhaul.dialoguePool.LeifHome",
+  "type": "Unique",
+  "dialogue": [
+    "mods.mb.BigHouseOverhaul.dialogue.LeifHome"
+  ]
+}

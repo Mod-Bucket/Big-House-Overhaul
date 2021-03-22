@@ -1,0 +1,13 @@
+{
+    "file": "staxel/village/character/Leif.villagernpc", //Case sensitive
+    //"patchIfFileDontExist": "staxel/item/ore/Ore1.item", //Should fail as this file exits
+    "priority": 2, //Higher priority leads to this patch being applied later than others.
+    "mergeLists": true, //Causes the patch to override arrays/lists rather than merge them.
+    "patch" : {
+		"uniqueDialogue": {
+			"staxel.reputationLevel.Liked": [
+			"mods.mb.BigHouseOverhaul.dialoguePool.LeifHome"
+			]
+		},
+    }
+}

@@ -1,0 +1,108 @@
+[
+  {
+    "title": "Start",
+    "body": [
+      "<<lockPlayerInConversation>>",
+      "<<typewriterMode on>>",
+      "<<pickRandomPath>>",
+      "<<Cecile>>",
+      "<<ComeForMe>>",
+      "<<Rem>>",
+      "<<flushRandomPath>>"
+    ],
+    "tags": "",
+    "colorID": 0,
+    "position": {
+      "x": 539,
+      "y": 261
+    }
+  },
+  {
+    "title": "Cecile",
+    "body": [
+      "<<branchNoVillagerWithName Cecile NoCecile>>",
+      "<<if $spoken_about_cecile is 1>>",
+      "<<loadVillagerName Cecile $c_name>>",
+      "^c:1486b0;$c_name;^c:pop;? #line:10000100",
+      "Oh, it's just that she looks just like someone I used to know... #line:10000200",
+      "She's a bit too young to be her though. #line:10000300",
+      "Someday I'll work up the courage to ask her about it. #line:10000400",
+      "<<typewriterMode off True True>>",
+      "<<releasePlayerFromConversation>>",
+      "<<else>>",
+      "[[NotSpoken]]",
+      "<<endif>>"
+    ],
+    "tags": "",
+    "colorID": 0,
+    "position": {
+      "x": 194,
+      "y": 582
+    }
+  },
+  {
+    "title": "NoCecile",
+    "body": [
+      "Even though she's not in the village. #line:10000500",
+      "I can't stop thinking about her. #line:10000600",
+      "There's just something I really want to ask her... #line:10000700",
+      "<<typewriterMode off True True>>",
+      "<<releasePlayerFromConversation>>"
+    ],
+    "tags": "",
+    "colorID": 0,
+    "position": {
+      "x": -102,
+      "y": 586
+    }
+  },
+  {
+    "title": "NotSpoken",
+    "body": [
+      "<<loadVillagerName Cecile $c_name>>",
+      "Ah, ^c:1486b0;$c_name;^c:pop;. #line:10000800",
+      "Someday I'll work up the courage to talk to you... #line:10000900",
+      "Oh! Please forgive my mumbling. #line:10001000",
+      "It helps me keep my thoughts in order. #line:10001100",
+      "<<set $spoken_about_cecile to 1>>",
+      "<<typewriterMode off True True>>",
+      "<<releasePlayerFromConversation>>"
+    ],
+    "tags": "",
+    "colorID": 0,
+    "position": {
+      "x": 194,
+      "y": 850
+    }
+  },
+  {
+    "title": "Rem",
+    "body": [
+      "You want to know more about ^c:1486b0;Rem^c:pop;? #line:10001200",
+      "We grew up together - childhood friends if you would. #line:10001300",
+      "<<typewriterMode off True True>>",
+      "<<releasePlayerFromConversation>>"
+    ],
+    "tags": "",
+    "colorID": 0,
+    "position": {
+      "x": 544,
+      "y": 564
+    }
+  },
+  {
+    "title": "ComeForMe",
+    "body": [
+      "Things must be pretty serious if ^c:1486b0;Rem^c:pop; came out here looking for me... #line:10001400",
+      "I feel bad for not being able to visit more often... #line:10001500",
+      "<<typewriterMode off True True>>",
+      "<<releasePlayerFromConversation>>"
+    ],
+    "tags": "",
+    "colorID": 0,
+    "position": {
+      "x": 818,
+      "y": 258
+    }
+  }
+]
